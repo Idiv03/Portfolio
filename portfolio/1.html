@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="https://kit.fontawesome.com/63023a32dc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+      <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Hi...<br>I am Divya Kumari</p>
+            <h1>Web <span>Developer</span></h1>
+        </div>
+        <div class="home-sci">
+            <a href="https://www.linkedin.com/in/divya-singh-51947a236"><i class='bx bxl-linkedin' ></i></a>
+            <a href="mailto:1103divyasingh@gmail.com"><i class='bx bx-envelope'></i></a>
+            <a href="https://github.com/Idiv03"><i class='bx bxl-github'></i></a>
+           
+
+             </div>
+      </div>
+    </div>
+<!------------About-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <h3 class="sub-title">About Me</h3>
+                    <p>I am a pre- final year student who is currently pursuing BTech in Computer Science Engineering.
+                        I am an aspiring /web Developer. I am not an expert at this stage but I always look forward for opportunities to push myself.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                        <li><span>Programming Languages</span><br>C|C++|Python|Java</li>
+                        <li><span>Web Development</span><br>HTML|CSS</li>
+                        <li><span>DSA</span></li>
+                        <li><span>OOP</span></li>
+                        
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                        <li><span>Matriculation(2018)</span><br>Sant Peter's School, Purnia<br>Percentage-91%</li>
+                        <li><span>Intermediate(2020)</span><br>Holy Mission Senior Secondary School, Patna<br>Percentage-79%</li>
+                        <li><span>Graduation(Ongoing:2021-2025)</span><br>Techno India University, Kolkata<br>CGPA-8.3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------projets-->
+    <div id="projects">
+        <div class="container">
+            <h2 class="sub-title">My Projects</h2>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-n"></i>
+                    <h2>Netflix Clone</h2>
+                    <p> With HTML and CSS as the building blocks, I'm excited to present a platform that showcases our love for movies and web development.</p>
+                    <a href="https://github.com/Idiv03/Netflix-HomePage">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                    <h2>Login Form</h2>
+                    <p> With HTML and CSS as the building blocks, I have created a login form with glow effect.</p>
+                    <a href="https://github.com/Idiv03/login-form">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <h2>fb Login Page</h2>
+                    <p> With HTML and CSS as the building blocks, i have created a login page of facebook.</p>
+                    <a href="https://github.com/Idiv03/facebook-loginPage">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="contact-left">
+                <h2 clas="sub-title">Contact Me</h2>
+                <p><i class='bx bx-mail-send'></i>xxdivyaxxsingh@gmail.com</p>
+                <p><i class='bx bxs-phone'>   XXXXXXXXXX</i></p>
+                <a href="myRes1.pdf" download class="btn btn2">Download my Resume</a>
+                
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+        <div class="copyright">Copyright © 2023 Divya</div>
+        </div>
+<!--------------script-->
+      
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    
+</body>
+</html>
